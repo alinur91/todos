@@ -1,0 +1,66 @@
+@use "../../scss/globals/variables" as v;
+@use "../../scss/util/mixins" as m;
+
+.add-task-btn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  background-color: var(--white);
+  padding: 10px;
+  @include m.border-Rad;
+
+  button {
+    @include m.button(add) {
+    }
+  }
+}
+
+.modal .close-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 24px;
+  color: var(--light-black);
+  cursor: pointer;
+}
+
+.modal .close-icon:hover{
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.modal h3 {
+  color: var(--light-black);
+  font-family: var();
+  margin-bottom: 20px;
+}
+
+.modal label {
+  color: var(--light-black);
+}
+.modal input {
+  height: 36px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 18px;
+  display: block;
+  @include m.border-Rad;
+}
+
+.modal .btns {
+  margin-top: 35px;
+  display: flex;
+  gap: 10px;
+}
+
+.modal .btn-add {
+  @include m.button(add) {
+  }
+}
+
+.modal .btn-cancel {
+  @include m.button(cancel) {
+  }
+}

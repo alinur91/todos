@@ -1,0 +1,27 @@
+@use "../globals/variables" as v;
+
+@mixin select() {
+  select {
+    @include border-Rad;
+    background-color: var(--gray);
+    @content;
+  }
+}
+
+@mixin border-Rad {
+  border-radius: v.$border-rad-sm;
+}
+
+@mixin button($color) {
+  @content;
+  padding: 5px 12px;
+  @include border-Rad;
+
+  @if $color == add {
+    background-color: var(--dark-blue);
+    color: var(--white);
+  } @else {
+    background-color: var(--gray);
+    color: var(--light-black);
+  }
+}

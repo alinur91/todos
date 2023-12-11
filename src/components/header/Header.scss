@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  
+  h1 {
+    color: var(--light-blue);
+    opacity: 0.6;
+    font-size: 42px;
+  }
+}
