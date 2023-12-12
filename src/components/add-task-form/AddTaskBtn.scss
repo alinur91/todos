@@ -26,7 +26,7 @@
   cursor: pointer;
 }
 
-.modal .close-icon:hover{
+.modal .close-icon:hover {
   background-color: var(--red);
   color: var(--white);
 }
@@ -44,9 +44,23 @@
   height: 36px;
   width: 100%;
   margin-top: 5px;
-  margin-bottom: 18px;
   display: block;
   @include m.border-Rad;
+}
+
+.modal input:invalid {
+  background-color: 2px solid red;
+}
+
+.modal p {
+  font-size: 12px;
+  color: var(--light-black);
+  opacity: 0;
+}
+
+.modal input:invalid + p {
+  opacity: 1;
+  color: var(--red);
 }
 
 .modal .btns {
@@ -62,5 +76,14 @@
 
 .modal .btn-cancel {
   @include m.button(cancel) {
+  }
+}
+
+.modal .filter-form {
+  margin-top: 5px;
+}
+
+.modal .filter-form select {
+  @include m.select(status) {
   }
 }

@@ -2,7 +2,8 @@
 @use "../../scss/util/mixins" as m;
 
 .filter-form {
-  @include m.select {
-    padding: 4px;
+  select {
+    @include m.select(filter) {
+    }
   }
 }

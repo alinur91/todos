@@ -1,0 +1,8 @@
+.todos-container {
+  width: 600px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--light-gray);
+  overflow-y: scroll;
+  max-height: 500px;
+}

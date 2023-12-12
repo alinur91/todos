@@ -1,10 +1,19 @@
 @use "../globals/variables" as v;
 
-@mixin select() {
-  select {
-    @include border-Rad;
+@mixin select($type) {
+  @include border-Rad;
+  padding: 4px;
+  @content;
+
+  @if $type == filter {
     background-color: var(--gray);
-    @content;
+  } 
+  @if $type == status{
+    width: 100%;
+    background-color: var(--white);
+  }
+   @if $type == change{
+    background-color: var(--dark-blue);
   }
 }
 
